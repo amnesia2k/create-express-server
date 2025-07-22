@@ -1,10 +1,10 @@
 {
-  "name": "create-express-kit",
-  "version": "1.0.0",
+  "name": "create-xstack",
+  "version": "1.2.3",
   "description": "A CLI tool to quickly scaffold Express.js backend projects with customizable options for language, database, ORM/ODM, and other tools.",
   "main": "index.js",
   "bin": {
-    "@express/create-express-server": "./bin/cli.js"
+    "create-xstack": "./bin/cli.js"
   },
   "type": "module",
   "scripts": {
