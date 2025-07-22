@@ -6,8 +6,12 @@ export const user = pgTable("user", {
   id: serial("id").primaryKey(),
   name: text("name").notNull(),
   email: varchar("email", { length: 256 }).notNull().unique(),
-  createdAt: timestamp("created_at").default(sql`CURRENT_TIMESTAMP`).notNull(),
-  updatedAt: timestamp("updated_at").default(sql`CURRENT_TIMESTAMP`).notNull(),
+  createdAt: timestamp("created_at")
+    .default(sql`CURRENT_TIMESTAMP`)
+    .notNull(),
+  updatedAt: timestamp("updated_at")
+    .default(sql`CURRENT_TIMESTAMP`)
+    .notNull(),
 });
 {{/if}}
 

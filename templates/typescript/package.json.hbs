@@ -22,54 +22,52 @@
     "prettier": "prettier --write . --log-level silent"
   },
   "dependencies": {
-    "express": "latest",
-    "dotenv": "latest",
-    "cors": "latest"
+    "express": "5.1.0",
+    "dotenv": "17.2.0",
+    "cors": "2.8.5",
     {{#if isMongo}},
-    "mongoose": "latest"
+    "mongoose": "8.16.4"
     {{/if}}
     {{#if isPostgres}},
-    "pg": "latest",
-    "drizzle-orm": "latest"
+    "pg": "8.16.3",
+    "drizzle-orm": "0.44.3",
     {{/if}}
     {{#if useJwt}},
-    "jsonwebtoken": "latest"
+    "jsonwebtoken": "9.0.2",
     {{/if}}
     {{#if useBcrypt}},
-    "bcryptjs": "latest"
+    "bcryptjs": "3.0.2",
     {{/if}}
     {{#if useMulter}},
-    "multer": "latest"
+    "multer": "2.0.2",
     {{/if}}
   },
   "devDependencies": {
-    "nodemon": "latest",
-    "morgan": "latest",
-    "@types/cors": "latest",
-    "@types/express": "latest",
-    "@types/node": "latest",
-    "typescript": "latest",
-    "ts-node": "latest",
-    "tsx": "latest",
-    "@typescript-eslint/eslint-plugin": "latest",
-    "@typescript-eslint/parser": "latest",
-    "eslint": "latest",
-    "eslint-config-prettier": "latest",
-    "eslint-plugin-prettier": "latest",
-    "prettier": "latest"
+    "nodemon": "3.1.10",
+    "morgan": "1.10.1",
+    "@types/cors": "2.8.19",
+    "@types/express": "5.0.3",
+    "@types/node": "24.1.0",
+    "@types/compression": "1.8.1",
+    "typescript": "5.8.3",
+    "ts-node": "10.9.2",
+    "tsx": "4.20.3",
+    "@typescript-eslint/eslint-plugin": "8.38.0",
+    "@typescript-eslint/parser": "8.38.0",
+    "eslint": "9.31.0",
+    "eslint-config-prettier": "10.1.8",
+    "eslint-plugin-prettier": "5.5.3",
+    "prettier": "3.6.2",
     {{#if useJwt}},
-    "@types/jsonwebtoken": "latest"
-    {{/if}}
-    {{#if isMongo}},
-    "@types/mongoose": "latest"
+    "@types/jsonwebtoken": "9.0.10",
     {{/if}}
     {{#if isPostgres}},
-    "@types/pg": "latest",
-    "drizzle-kit": "latest"
+    "@types/pg": "8.15.4",
+    "drizzle-kit": "0.31.4",
     {{/if}}
     {{#if useMulter}},
-    "@types/multer": "latest"
+    "@types/multer": "2.0.0",
     {{/if}},
-    "dotenv-cli": "latest"
+    "dotenv-cli": "8.0.0"
   }
 }

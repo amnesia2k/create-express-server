@@ -1,6 +1,10 @@
 import { NextFunction, Request, Response } from "express";
 
-const demo = async (req: Request, res: Response, next: NextFunction) => {
+export const demo = async (
+  _req: Request,
+  res: Response,
+  _next: NextFunction
+) => {
   try {
     return res.status(200).json({
       status: 200,
@@ -15,5 +19,3 @@ const demo = async (req: Request, res: Response, next: NextFunction) => {
     });
   }
 };
-
-export { demo };

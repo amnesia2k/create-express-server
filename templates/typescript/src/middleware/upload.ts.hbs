@@ -1,5 +1,4 @@
 {{#if useMulter}}
-import { Request } from "express";
 import multer, { StorageEngine } from "multer";
 
 // for local storage upload -------uncomment for use----------
@@ -19,15 +18,15 @@ const storage: StorageEngine = multer.diskStorage({
 const storage = multer.memoryStorage();
 
 const upload = multer({
-    storage: storage,
-//-------IF USE FILE SIZE LIMITITATIONS---------
-/*
+  storage: storage,
+  //-------IF USE FILE SIZE LIMITITATIONS---------
+  /*
     limits: {
         fileSize: 1000000 // 1MB limit
     },
 */
-//-------IF USE FILE FILTER---------
-/*
+  //-------IF USE FILE FILTER---------
+  /*
     fileFilter: (req: Request, file: Express.Multer.File, cb: multer.FileFilterCallback) => {
         if (file.mimetype === 'image/jpg' || file.mimetype === 'image/jpeg' || file.mimetype === 'image/png') {
             cb(null, true);

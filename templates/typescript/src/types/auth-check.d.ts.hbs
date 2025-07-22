@@ -3,7 +3,7 @@ import { Request } from "express";
 import { JwtPayload } from "jsonwebtoken";
 
 interface RequestAuth extends Request {
-  id? : string,
+  id?: string;
   token?: string | JwtPayload;
 }
 

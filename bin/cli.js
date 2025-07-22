@@ -11,7 +11,7 @@ import { execa } from "execa";
 const program = new Command();
 
 program
-  .name("create-express-server")
+  .name("create-xstack")
   .description("Scaffolds a new Express.js backend project.")
   .version("0.1.0");
 
@@ -199,6 +199,8 @@ async function createExpressApp(options) {
     useJwt: otherTools.includes("JWT"),
     useBcrypt: otherTools.includes("Bcrypt"),
     useMulter: otherTools.includes("Multer"),
+    isPnpm: packageManager === "pnpm",
+    isNpm: packageManager === "npm",
   };
 
   // --- Register Handlebars Helpers ---
