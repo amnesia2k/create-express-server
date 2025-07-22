@@ -56,7 +56,7 @@ async function loadRoutesFlat() {
       app.use("/api/v1", router);
       logger.info(`✅ Mounted routes from ${file} at /api/v1`);
     } catch (err) {
-      logger.error(`❌ Error loading ${file}`;
+      logger.error(`❌ Error loading ${file}`);
     }
   }
 
