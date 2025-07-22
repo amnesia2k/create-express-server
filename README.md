@@ -12,13 +12,13 @@ XStack CLI is designed to be highly interactive and easy to use. Once installed,
   The simplest way to use XStack CLI is by running the command without any arguments. It will guide you through the setup process with a series of interactive prompts.
 
   ```bash
-  pnpm create-xstack@latest
+  pnpm create-xpress-server@latest
   ```
 
   or
 
   ```bash
-  npm create-xstack@latest
+  npm create-xpress-server@latest
   ```
 
   The CLI will prompt you for various configurations to tailor your new Express.js project:
@@ -113,7 +113,7 @@ A passionate developer dedicated to building impactful tools and improving the d
 
 ---
 
-[![NPM Version](https://img.shields.io/npm/v/create-xstack?style=for-the-badge&logo=npm&color=CB3837)](https://www.npmjs.com/package/create-xstack)
+[![NPM Version](https://img.shields.io/npm/v/create-xpress-server?style=for-the-badge&logo=npm&color=CB3837)](https://www.npmjs.com/package/create-xpress-server)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 [![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
 [![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com/)

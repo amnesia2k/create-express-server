@@ -11,7 +11,7 @@ import { execa } from "execa";
 const program = new Command();
 
 program
-  .name("create-xstack")
+  .name("create-xpress-server")
   .description("Scaffolds a new Express.js backend project.")
   .version("0.1.0");
 
