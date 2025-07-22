@@ -1,144 +1,127 @@
-# **Express.js Project Scaffolder: Rapid Backend Setup**
+# **XStack CLI: Rapid Express.js Project Scaffolding** 🚀
 
-This project is a command-line interface (CLI) tool designed to streamline the initialization of Express.js backend applications. It provides developers with a quick, opinionated, yet highly customizable starting point, allowing for the effortless scaffolding of projects with choices for programming language (JavaScript or TypeScript), database integrations (MongoDB or PostgreSQL), ORM/ODM selection (Mongoose or Drizzle ORM), and essential features like JWT authentication, Bcrypt password hashing, and Multer for file uploads. 🛠️
-
-## **Installation**
-
-Getting this project up and running on your local machine is straightforward. Follow these steps:
-
-*   **Clone the Repository**:
-    ```bash
-    git clone https://github.com/your-username/create-express-server.git
-    ```
-*   **Navigate to the Project Directory**:
-    ```bash
-    cd create-express-server
-    ```
-*   **Install Dependencies**: This project uses `pnpm` as its package manager, as specified in `package.json`. If you don't have pnpm, you can install it globally via npm: `npm install -g pnpm`.
-    ```bash
-    pnpm install
-    ```
-*   **Link the CLI Tool (for local development/testing)**:
-    To use `create-express-server` directly from your terminal, you can link it locally:
-    ```bash
-    pnpm link --global
-    ```
-
-Now, the `create-express-server` command should be available in your terminal!
-
-## **Usage**
-
-To create a new Express.js project using this CLI, simply open your terminal in the directory where you want to create your new project and run the command:
-
-```bash
-create-express-server
-```
-
-You will be guided through an interactive prompt where you can configure your new Express.js application. The CLI will ask you to specify:
-
-*   **Project Name**: The name for your new backend project.
-*   **Language**: Choose between JavaScript and TypeScript.
-*   **Database**: Select either MongoDB or PostgreSQL.
-*   **ORM/ODM**: Based on your database choice, select Mongoose (for MongoDB) or Drizzle ORM (for PostgreSQL).
-*   **Authentication**: Option to include JSON Web Tokens (JWT) for authentication.
-*   **Password Hashing**: Option to include Bcrypt.js for secure password hashing.
-*   **File Uploads**: Option to include Multer for handling file uploads.
-
-After answering the prompts, the CLI will scaffold a new Express.js project in a subdirectory with the chosen name, pre-configured with your selections.
-
-**Example Flow (Illustrative):**
-
-```bash
-? What is the name of your project? (my-new-express-app)
-? Which language would you like to use? (Use arrow keys)
-  JavaScript
-❯ TypeScript
-? Which database would you like to use? (Use arrow keys)
-  MongoDB
-❯ PostgreSQL
-? Which ORM/ODM would you like to use? (Use arrow keys)
-❯ Drizzle ORM
-  Mongoose
-? Do you want to include JWT for authentication? (y/N) y
-? Do you want to include Bcrypt.js for password hashing? (y/N) y
-? Do you want to include Multer for file uploads? (y/N) n
-
-✨ Creating my-new-express-app...
-🎉 Project 'my-new-express-app' created successfully!
-```
-
-Once your project is generated, navigate into its directory (`cd my-new-express-app`) and run `pnpm install` to install its specific dependencies, then `pnpm dev` to start the development server.
-
-## **Features**
-
-This CLI tool comes packed with features designed to accelerate your backend development workflow:
-
-*   🚀 **Rapid Project Scaffolding**: Quickly set up a new Express.js project in seconds.
-*   🌐 **Language Choice**: Seamlessly generate projects in either JavaScript or TypeScript, catering to different team preferences and project requirements.
-*   💾 **Database Flexibility**: Support for both NoSQL (MongoDB with Mongoose) and SQL (PostgreSQL with Drizzle ORM) databases.
-*   🔑 **Authentication Ready**: Built-in option to integrate JSON Web Tokens (JWT) for robust authentication mechanisms.
-*   🔒 **Secure Password Hashing**: Include Bcrypt.js for best-practice password security right from the start.
-*   📤 **File Uploads**: Easily add Multer support for handling multipart/form-data, perfect for file and image uploads.
-*   ⚙️ **Configurable Middlewares**: Pre-configured common Express.js middlewares like CORS, Morgan for logging, and body parsers.
-*   📁 **Modular Structure**: Generated projects follow a clean, modular structure, making them easy to navigate, extend, and maintain.
-*   Linting and Formatting: Includes ESLint and Prettier configurations for consistent code quality.
-
-## **Technologies Used**
-
-| Category         | Technology                 | Description                                    |
-| :--------------- | :------------------------- | :--------------------------------------------- |
-| **CLI Core**     | `Node.js`                  | JavaScript runtime for the CLI.                |
-|                  | `Commander.js`             | Powerful CLI framework.                        |
-|                  | `Inquirer.js`              | Interactive command-line prompts.              |
-|                  | `Handlebars.js`            | Templating engine for file generation.         |
-|                  | `Chalk`                    | Terminal string styling.                       |
-|                  | `fs-extra`                 | Extended file system utilities.                |
-| **Backend (Generated)** | `Express.js`               | Fast, unopinionated, minimalist web framework. |
-|                  | `JavaScript`               | Primary language for generated projects.       |
-|                  | `TypeScript`               | Optional static type-checking for projects.    |
-|                  | `MongoDB`                  | Popular NoSQL database.                        |
-|                  | `PostgreSQL`               | Powerful open-source relational database.      |
-|                  | `Mongoose`                 | MongoDB object modeling for Node.js.           |
-|                  | `Drizzle ORM`              | Modern TypeScript ORM for relational databases.|
-|                  | `dotenv`                   | Loads environment variables from `.env` file.  |
-|                  | `CORS`                     | Middleware for enabling Cross-Origin Resource Sharing. |
-|                  | `jsonwebtoken`             | JSON Web Token implementation (optional).      |
-|                  | `bcryptjs`                 | Password hashing library (optional).           |
-|                  | `multer`                   | Middleware for handling multipart/form-data (optional). |
-| **Development**  | `Nodemon`                  | Automatically restarts the node application.   |
-|                  | `Morgan`                   | HTTP request logger middleware.                |
-|                  | `ESLint`                   | Pluggable JavaScript linter.                   |
-|                  | `Prettier`                 | Opinionated code formatter.                    |
-|                  | `tsx`                      | Node.js execute for TypeScript.                |
-|                  | `typescript`               | TypeScript language compiler.                  |
-|                  | `drizzle-kit`              | CLI and migration tooling for Drizzle ORM.     |
-|                  | `dotenv-cli`               | CLI for loading environment variables.         |
-
-## **Contributing**
-
-I welcome contributions from the community! If you have suggestions for improvements, new features, or find any bugs, please feel free to:
-
-*   ⭐ **Star the repository**: Show your support!
-*   🐛 **Report a bug**: Open an issue if you encounter any problems.
-*   💡 **Suggest a feature**: Propose new ideas by opening an issue.
-*   💻 **Submit a pull request**: Fork the repository, create a new branch, make your changes, and submit a pull request. Please ensure your code adheres to the existing style and conventions.
-
-## **License**
-
-This project is licensed under the MIT License. You can find the full text of the license [here](https://opensource.org/licenses/MIT).
-
-## **Author Info**
-
-Hey there! I'm the creator of this project. Feel free to connect with me!
-
-*   LinkedIn: [your_linkedin_profile](https://linkedin.com/in/your_username)
-*   Twitter: [your_twitter_handle](https://twitter.com/your_username)
-*   Portfolio: [your_portfolio_website](https://your-portfolio.com)
+This project is a robust Command Line Interface (CLI) tool designed to streamline the setup of your Express.js backend applications. Say goodbye to repetitive boilerplate! XStack CLI empowers developers to quickly scaffold new projects with customizable options for language (JavaScript or TypeScript), database (MongoDB or PostgreSQL), ORM/ODM (Mongoose or Drizzle ORM), and essential utilities like JWT authentication and Multer for file uploads. It's engineered to kickstart your development process efficiently, letting you focus on building core features right away.
 
 ---
 
-[![npm version](https://badge.fury.io/js/create-express-server.svg)](https://badge.fury.io/js/create-express-server)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![made with Node.js](https://img.shields.io/badge/Made%20with-Node.js-green?logo=node.js)](https://nodejs.org/)
-[![Package Manager: pnpm](https://img.shields.io/badge/package%20manager-pnpm-red?logo=pnpm)](https://pnpm.io/)
+## Usage 💡
+
+XStack CLI is designed to be highly interactive and easy to use. Once installed, you can simply run the command and follow the prompts.
+
+- **Interactive Mode**:
+  The simplest way to use XStack CLI is by running the command without any arguments. It will guide you through the setup process with a series of interactive prompts.
+
+  ```bash
+  pnpm create-xstack@latest
+  ```
+
+  or
+
+  ```bash
+  npm create-xstack@latest
+  ```
+
+  The CLI will prompt you for various configurations to tailor your new Express.js project:
+
+  - **Project Name**: Define the name for your new Express.js application.
+  - **Language**: Choose between **JavaScript** or **TypeScript** for your codebase.
+  - **Database**: Select your preferred database: **MongoDB** or **PostgreSQL**.
+  - **ORM/ODM**: The appropriate ORM/ODM will be automatically selected based on your database choice (Mongoose for MongoDB, Drizzle ORM for PostgreSQL).
+  - **Additional Features**: Opt to include powerful utilities like **JWT authentication** for secure routes, **Bcrypt.js** for robust password hashing, and **Multer** for efficient file uploads.
+
+  After you've made your selections, XStack CLI will generate a new, fully configured Express.js project in a fresh directory named after your chosen project name.
+
+---
+
+## Features ✨
+
+XStack CLI comes packed with features to accelerate your backend development:
+
+- **🚀 Rapid Scaffolding**: Quickly generate a complete Express.js project structure in seconds, saving valuable setup time.
+- **🌐 Language Flexibility**: Choose between JavaScript or TypeScript to align with your team's expertise or project-specific requirements.
+- **🗄️ Diverse Database Support**: Seamlessly integrate with leading databases:
+  - **MongoDB**: Comes configured with Mongoose for powerful Object Data Modeling.
+  - **PostgreSQL**: Includes Drizzle ORM for a modern, type-safe, and high-performance SQL experience.
+- **🔑 Authentication Ready**: Optional integration of JSON Web Tokens (JWT) for robust and secure user authentication flows.
+- **🔒 Secure Password Hashing**: Easily include Bcrypt.js to implement industry-standard password hashing, enhancing application security.
+- **📤 Effortless File Uploads**: Add Multer for handling `multipart/form-data`, making file uploads straightforward.
+- **🧩 Essential Middleware**: Pre-configured with common Express.js middleware such as `cors` (for Cross-Origin Resource Sharing), `morgan` (for HTTP request logging), and built-in body parsers for JSON and URL-encoded data.
+- **⚙️ Development Utilities**: Your generated project includes `nodemon` for automatic server restarts on code changes, `ESLint` for enforcing code quality standards, and `Prettier` for consistent code formatting.
+- **📦 Drizzle Kit Integration**: If you opt for PostgreSQL and Drizzle, the generated project will include `drizzle-kit` commands to manage database migrations, schema generation, and more.
+
+---
+
+## Technologies Used 🛠️
+
+This project leverages a modern stack to deliver a seamless and efficient development experience.
+
+| Category      | Technology    | Description                                                                                  | Link                                                     |
+| :------------ | :------------ | :------------------------------------------------------------------------------------------- | :------------------------------------------------------- |
+| **Core**      | Node.js       | JavaScript runtime for server-side applications.                                             | [nodejs.org](https://nodejs.org/en)                      |
+|               | Express.js    | Fast, unopinionated, minimalist web framework for Node.js.                                   | [expressjs.com](https://expressjs.com/)                  |
+| **Languages** | JavaScript    | The primary language for the project and generated templates.                                | [javascript.info](https://javascript.info/)              |
+|               | TypeScript    | Superset of JavaScript that compiles to plain JavaScript.                                    | [typescriptlang.org](https://www.typescriptlang.org/)    |
+| **CLI Tools** | Commander.js  | Node.js command-line interfaces made easy.                                                   | [npm/commander](https://www.npmjs.com/package/commander) |
+|               | Inquirer.js   | Common interactive command-line user interfaces.                                             | [npm/inquirer](https://www.npmjs.com/package/inquirer)   |
+|               | Chalk         | Terminal string styling done right.                                                          | [npm/chalk](https://www.npmjs.com/package/chalk)         |
+|               | Handlebars.js | Logic-less templating language for dynamic project generation.                               | [handlebarsjs.com](https://handlebarsjs.com/)            |
+| **Databases** | MongoDB       | NoSQL database for flexible data storage (with Mongoose).                                    | [mongodb.com](https://www.mongodb.com/)                  |
+|               | PostgreSQL    | Powerful, open-source object-relational database system (with Drizzle ORM).                  | [postgresql.org](https://www.postgresql.org/)            |
+| **ORMs/ODMs** | Mongoose      | MongoDB object modeling for Node.js.                                                         | [mongoosejs.com](https://mongoosejs.com/)                |
+|               | Drizzle ORM   | TypeScript ORM for SQL databases.                                                            | [orm.drizzle.team](https://orm.drizzle.team/)            |
+| **Utilities** | JWT           | JSON Web Token implementation for secure authentication.                                     | [jwt.io](https://jwt.io/)                                |
+|               | Bcrypt.js     | Library for hashing passwords.                                                               | [npm/bcryptjs](https://www.npmjs.com/package/bcryptjs)   |
+|               | Multer        | Middleware for handling `multipart/form-data`.                                               | [npm/multer](https://www.npmjs.com/package/multer)       |
+|               | Dotenv        | Loads environment variables from a `.env` file.                                              | [npm/dotenv](https://www.npmjs.com/package/dotenv)       |
+|               | Cors          | Provides a Connect/Express middleware that can be used to enable CORS.                       | [npm/cors](https://www.npmjs.com/package/cors)           |
+|               | Morgan        | HTTP request logger middleware for Node.js.                                                  | [npm/morgan](https://www.npmjs.com/package/morgan)       |
+| **Dev Tools** | Nodemon       | Utility that monitors for any changes in your source and automatically restarts your server. | [nodemon.io](https://nodemon.io/)                        |
+|               | ESLint        | Pluggable linting utility for JavaScript and JSX.                                            | [eslint.org](https://eslint.org/)                        |
+|               | Prettier      | Opinionated code formatter.                                                                  | [prettier.io](https://prettier.io/)                      |
+
+---
+
+## Contributing 🤝
+
+We welcome contributions from the community to make XStack CLI even more powerful and versatile! If you're interested in helping out, please follow these guidelines:
+
+- 🌟 **Fork the Repository**: Start by forking the `create-express-server` repository to your personal GitHub account.
+- 🌿 **Create a New Branch**: Before making any changes, create a new branch for your feature or bug fix: `git checkout -b feature/your-awesome-feature` or `git checkout -b bugfix/fix-that-bug`.
+- ✍️ **Make Your Changes**: Implement your desired changes, ensuring your code adheres to the project's established coding style. ESLint and Prettier are configured to help maintain consistency.
+- 🧪 **Test Your Changes**: If your contribution involves new functionality, please add corresponding tests. For changes to the CLI itself, consider thoroughly testing the generated project output.
+- ➕ **Commit Your Work**: Write clear, concise, and descriptive commit messages that explain the purpose of your changes.
+- ⬆️ **Push to Your Fork**: Once your changes are complete and tested, push your new branch to your forked repository.
+- ➡️ **Open a Pull Request**: Finally, submit a pull request to the `main` branch of the original `create-express-server` repository. Provide a detailed description of your changes, including any relevant context or problem solved.
+
+We truly appreciate your efforts and contributions to improving this tool!
+
+---
+
+## License 📜
+
+This project is licensed under the **MIT License**. For more details, please see the [LICENSE](LICENSE) file in the repository.
+
+---
+
+## Author Info ✍️
+
+A passionate developer dedicated to building impactful tools and improving the developer experience.
+
+- **GitHub**: [amnesia2k](https://github.com/amnesia2k)
+- **Twitter**: [@olathedev\_](https://x.com/@olathedev_)
+- **Portfolio**: [olatilewa.dev](https://olatilewa.dev)
+
+---
+
+[![NPM Version](https://img.shields.io/npm/v/create-xstack?style=for-the-badge&logo=npm&color=CB3837)](https://www.npmjs.com/package/create-xstack)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+[![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
+[![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
+
+---
+
 [![Readme was generated by Dokugen](https://img.shields.io/badge/Readme%20was%20generated%20by-Dokugen-brightgreen)](https://www.npmjs.com/package/dokugen)
