@@ -1,8 +1,8 @@
 import { Router } from "express";
 import * as demoControllers from "../controllers/demo.controller.js";
 
-const demoRouter = Router();
+const router = Router();
 
-demoRouter.get('/',demoControllers.demo);
+router.get('/',demoControllers.demo);
 
-export default demoRouter;
+export default router;
