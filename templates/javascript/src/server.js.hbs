@@ -1,0 +1,49 @@
+import dotenv from "dotenv";
+import express from "express";
+import applyRouter from "./routers/routers.js";
+import applyMidleware from "./middlewares/middlewares.js";
+{{#if isMongo}}
+import dbConnection from "./db/mongodb/db.js";
+{{/if}}
+{{#if useJwt}}
+// import authCheck from "./middlewares/auth-check.js";
+{{/if}}
+{{#if useMulter}}
+// import upload from "./middlewares/upload.js";
+{{/if}}
+
+
+dotenv.config();
+const app = express();
+
+// Apply middlewares
+applyMidleware(app);
+
+// Apply routes
+applyRouter(app);
+
+// Example for routes that might use auth or upload:
+/*
+app.get("/protected", authCheck, (req, res) => {
+  res.json({ message: "This is a protected route." });
+});
+
+app.post("/upload", upload.single('image'), (req, res) => {
+  res.json({ message: "File uploaded." });
+});
+*/
+
+// Database connection
+{{#if isMongo}}
+const db_url = process.env.DATABASE_URL;
+dbConnection(db_url);
+{{else if isPostgres}}
+console.log("PostgreSQL Drizzle DB connection is initialized when `db` is imported.");
+{{/if}}
+
+
+// Server initialization
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${port}`);
+});

@@ -1,0 +1,27 @@
+{{#if isDrizzle}}
+import { drizzle } from "drizzle-orm/node-postgres";
+import { Pool } from "pg";
+import { schema } from "./schema/index.js";
+
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL,
+  connectionTimeoutMillis: 20000,
+  idleTimeoutMillis: 120000,
+  max: 10,
+});
+
+export const db = drizzle(pool, { schema });
+{{/if}}
+
+{{#if isMongoose}}
+import mongoose from "mongoose";
+
+const dbConnection = (db_url) => {
+  mongoose
+      .connect(db_url)
+      .then(() => console.log("Connected to MongoDB"))
+      .catch((err) => console.error("Could not connect to MongoDB", err));
+};
+
+export default dbConnection;
+{{/if}}

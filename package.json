@@ -1,0 +1,52 @@
+{
+  "name": "create-express-server",
+  "version": "1.0.0",
+  "description": "A CLI tool to quickly scaffold Express.js backend projects with customizable options for language, database, ORM/ODM, and other tools.",
+  "main": "index.js",
+  "bin": {
+    "create-express-server": "./bin/cli.js"
+  },
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express",
+    "nodejs",
+    "backend",
+    "scaffolding",
+    "cli",
+    "typescript",
+    "javascript",
+    "mongodb",
+    "postgresql",
+    "mongoose",
+    "drizzle",
+    "boilerplate"
+  ],
+  "author": "amnesia2k",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amnesia2k/your-repo-name.git"
+  },
+  "files": [
+    "bin/",
+    "templates/",
+    "package.json",
+    "README.md",
+    "pnpm-lock.yaml",
+    "LICENSE",
+    ".prettierignore",
+    ".gitignore"
+  ],
+  "license": "MIT",
+  "packageManager": "pnpm@10.13.1",
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "commander": "^14.0.0",
+    "execa": "^9.6.0",
+    "fs-extra": "^11.3.0",
+    "handlebars": "^4.7.8",
+    "inquirer": "^12.8.2"
+  }
+}

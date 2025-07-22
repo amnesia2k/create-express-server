@@ -1,0 +1,14 @@
+{{#if isDrizzle}}
+import * as dotenv from "dotenv";
+dotenv.config({ path: ".env" });
+
+/** @type {import("drizzle-kit").Config} */
+export default {
+  schema: "./src/db/postgresql/schema/index.js", // Path to your main schema file
+  out: "./drizzle", // Directory for migrations
+  driver: "pg", // PostgreSQL driver
+  dbCredentials: {
+    connectionString: process.env.DATABASE_URL,
+  },
+};
+{{/if}}

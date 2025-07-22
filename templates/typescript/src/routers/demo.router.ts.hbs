@@ -1,0 +1,8 @@
+import { Router } from "express";
+import * as demoControllers from "../controllers/demo.controller";
+
+const demoRouter = Router();
+
+demoRouter.get('/',demoControllers.demo);
+
+export default demoRouter;
