@@ -7,7 +7,7 @@
 > or  
 > **`pnpx create-xpress-server@latest`**  
 > or  
-> **`pnpm create create-xpress-server`**
+> **`pnpm create create-xpress-server@latest`**
 >
 > Installing directly with `npm i create-xpress-server` will not do what you want. It's a CLI generator, not a library!
 
