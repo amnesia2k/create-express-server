@@ -11,22 +11,16 @@
 >
 > Installing directly with `npm i create-xpress-server` will not do what you want. It's a CLI generator, not a library!
 
-This project is a robust Command Line Interface (CLI) tool designed to streamline the setup of your Express.js backend applications. Say goodbye to repetitive boilerplate! XStack CLI empowers developers to quickly scaffold new projects with customizable options for language (JavaScript or TypeScript), database (MongoDB or PostgreSQL), ORM/ODM (Mongoose or Drizzle ORM), and essential utilities like JWT authentication and Multer for file uploads. It's engineered to kickstart your development process efficiently, letting you focus on building core features right away.
+This project is a robust Command Line Interface (CLI) tool designed to streamline the setup of your Express.js backend applications. Say goodbye to repetitive boilerplate! Express Server CLI empowers developers to quickly scaffold new projects with customizable options for language (JavaScript or TypeScript), database (MongoDB or PostgreSQL), ORM/ODM (Mongoose or Drizzle ORM), and essential utilities like JWT authentication and Multer for file uploads. It's engineered to kickstart your development process efficiently, letting you focus on building core features right away.
 
 ---
 
 ## Usage 💡
 
-XStack CLI is designed to be highly interactive and easy to use. Once installed, you can simply run the command and follow the prompts.
+Express Server CLI is designed to be highly interactive and easy to use. Once installed, you can simply run the command and follow the prompts.
 
 - **Interactive Mode**:
-  The simplest way to use XStack CLI is by running the command without any arguments. It will guide you through the setup process with a series of interactive prompts.
-
-  ```bash
-  pnpm create create-xpress-server
-  ```
-
-  or
+  The simplest way to use Express Server CLI is by running the command without any arguments. It will guide you through the setup process with a series of interactive prompts.
 
   ```bash
   pnpx create-xpress-server@latest
@@ -38,6 +32,12 @@ XStack CLI is designed to be highly interactive and easy to use. Once installed,
   npx create-xpress-server@latest
   ```
 
+  or
+
+  ```bash
+  pnpm create create-xpress-server@latest
+  ```
+
   The CLI will prompt you for various configurations to tailor your new Express.js project:
 
   - **Project Name**: Define the name for your new Express.js application.
@@ -46,13 +46,13 @@ XStack CLI is designed to be highly interactive and easy to use. Once installed,
   - **ORM/ODM**: The appropriate ORM/ODM will be automatically selected based on your database choice (Mongoose for MongoDB, Drizzle ORM for PostgreSQL).
   - **Additional Features**: Opt to include powerful utilities like **JWT authentication** for secure routes, **Bcrypt.js** for robust password hashing, and **Multer** for efficient file uploads.
 
-  After you've made your selections, XStack CLI will generate a new, fully configured Express.js project in a fresh directory named after your chosen project name.
+  After you've made your selections, Express Server CLI will generate a new, fully configured Express.js project in a fresh directory named after your chosen project name.
 
 ---
 
 ## Features ✨
 
-XStack CLI comes packed with features to accelerate your backend development:
+Express Server CLI comes packed with features to accelerate your backend development:
 
 - **🚀 Rapid Scaffolding**: Quickly generate a complete Express.js project structure in seconds, saving valuable setup time.
 - **🌐 Language Flexibility**: Choose between JavaScript or TypeScript to align with your team's expertise or project-specific requirements.
@@ -100,7 +100,7 @@ This project leverages a modern stack to deliver a seamless and efficient develo
 
 ## Contributing 🤝
 
-We welcome contributions from the community to make XStack CLI even more powerful and versatile! If you're interested in helping out, please follow these guidelines:
+We welcome contributions from the community to make Express Server CLI even more powerful and versatile! If you're interested in helping out, please follow these guidelines:
 
 - 🌟 **Fork the Repository**: Start by forking the `create-express-server` repository to your personal GitHub account.
 - 🌿 **Create a New Branch**: Before making any changes, create a new branch for your feature or bug fix: `git checkout -b feature/your-awesome-feature` or `git checkout -b bugfix/fix-that-bug`.
