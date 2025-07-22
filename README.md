@@ -1,5 +1,16 @@
 # **Express Server CLI: Rapid Express.js Project Scaffolding** 🚀
 
+> ⚠️ **Don’t install this package manually!**  
+> Use it like this instead:
+>
+> **`npx create-xpress-server@latest`**  
+> or  
+> **`pnpx create-xpress-server@latest`**  
+> or  
+> **`pnpm create create-xpress-server`**
+>
+> Installing directly with `npm i create-xpress-server` will not do what you want. It's a CLI generator, not a library!
+
 This project is a robust Command Line Interface (CLI) tool designed to streamline the setup of your Express.js backend applications. Say goodbye to repetitive boilerplate! XStack CLI empowers developers to quickly scaffold new projects with customizable options for language (JavaScript or TypeScript), database (MongoDB or PostgreSQL), ORM/ODM (Mongoose or Drizzle ORM), and essential utilities like JWT authentication and Multer for file uploads. It's engineered to kickstart your development process efficiently, letting you focus on building core features right away.
 
 ---
@@ -12,13 +23,19 @@ XStack CLI is designed to be highly interactive and easy to use. Once installed,
   The simplest way to use XStack CLI is by running the command without any arguments. It will guide you through the setup process with a series of interactive prompts.
 
   ```bash
-  pnpm create-xpress-server@latest
+  pnpm create create-xpress-server
   ```
 
   or
 
   ```bash
-  npm create-xpress-server@latest
+  pnpx create-xpress-server@latest
+  ```
+
+  or
+
+  ```bash
+  npx create-xpress-server@latest
   ```
 
   The CLI will prompt you for various configurations to tailor your new Express.js project:
