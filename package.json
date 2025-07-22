@@ -1,6 +1,6 @@
 {
   "name": "create-xstack",
-  "version": "2.2.6",
+  "version": "2.2.7",
   "description": "A CLI tool to quickly scaffold Express.js backend projects with customizable options for language, database, ORM/ODM, and other tools.",
   "main": "index.js",
   "bin": {
