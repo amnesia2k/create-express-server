@@ -22,33 +22,34 @@
     "prettier": "prettier --write . --log-level silent"
   },
   "dependencies": {
-    "express": "latest",
-    "dotenv": "latest",
-    "cors": "latest"
+    "express": "5.1.0",
+    "dotenv": "17.2.0",
+    "cors": "2.8.5",
     {{#if isMongo}},
     "mongoose": "latest"
     {{/if}}
     {{#if isPostgres}},
-    "pg": "latest",
-    "drizzle-orm": "latest"
+    "pg": "8.16.3",
+    "drizzle-orm": "0.44.3",
     {{/if}}
     {{#if useJwt}},
-    "jsonwebtoken": "latest"
+    "jsonwebtoken": "9.0.2",
     {{/if}}
     {{#if useBcrypt}},
-    "bcryptjs": "latest"
+    "bcryptjs": "3.0.2",
     {{/if}}
     {{#if useMulter}},
-    "multer": "latest"
+    "multer": "2.0.2"
     {{/if}}
   },
   "devDependencies": {
-    "nodemon": "latest",
-    "morgan": "latest",
-    "eslint": "latest",
-    "eslint-config-prettier": "latest",
-    "eslint-plugin-prettier": "latest",
-    "prettier": "latest",
-    "dotenv-cli": "latest"
+    "nodemon": "3.1.10",
+    "morgan": "1.10.1",
+    "eslint": "9.31.0",
+    "eslint-config-prettier": "10.1.8",
+    "eslint-plugin-prettier": "5.5.3",
+    "prettier": "3.6.2",
+    "dotenv-cli": "8.0.0",
+    "drizzle-kit": "0.31.4"
   }
 }
