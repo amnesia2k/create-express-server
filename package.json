@@ -27,7 +27,7 @@
   "author": "amnesia2k",
   "repository": {
     "type": "git",
-    "url": "https://github.com/amnesia2k/your-repo-name.git"
+    "url": "https://github.com/amnesia2k/create-express-server"
   },
   "files": [
     "bin/",
