@@ -6,6 +6,7 @@ export const demo = async (
   _next: NextFunction
 ) => {
   try {
+    console.log("Demo route works!");
     return res.status(200).json({
       status: 200,
       success: true,
