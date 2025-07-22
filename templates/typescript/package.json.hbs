@@ -24,23 +24,12 @@
   "dependencies": {
     "express": "5.1.0",
     "dotenv": "17.2.0",
-    "cors": "2.8.5",
-    {{#if isMongo}},
-    "mongoose": "8.16.4"
-    {{/if}}
-    {{#if isPostgres}},
-    "pg": "8.16.3",
-    "drizzle-orm": "0.44.3",
-    {{/if}}
-    {{#if useJwt}},
-    "jsonwebtoken": "9.0.2",
-    {{/if}}
-    {{#if useBcrypt}},
-    "bcryptjs": "3.0.2",
-    {{/if}}
-    {{#if useMulter}},
-    "multer": "2.0.2",
-    {{/if}}
+    "cors": "2.8.5"
+    {{#if isMongo}}, "mongoose": "8.16.4"{{/if}}
+    {{#if isPostgres}}, "pg": "8.16.3", "drizzle-orm": "0.44.3"{{/if}}
+    {{#if useJwt}}, "jsonwebtoken": "9.0.2"{{/if}}
+    {{#if useBcrypt}}, "bcryptjs": "3.0.2"{{/if}}
+    {{#if useMulter}}, "multer": "2.0.2"{{/if}}
   },
   "devDependencies": {
     "nodemon": "3.1.10",
@@ -58,16 +47,9 @@
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-prettier": "5.5.3",
     "prettier": "3.6.2",
-    {{#if useJwt}},
-    "@types/jsonwebtoken": "9.0.10",
-    {{/if}}
-    {{#if isPostgres}},
-    "@types/pg": "8.15.4",
-    "drizzle-kit": "0.31.4",
-    {{/if}}
-    {{#if useMulter}},
-    "@types/multer": "2.0.0",
-    {{/if}},
     "dotenv-cli": "8.0.0"
+    {{#if useJwt}}, "@types/jsonwebtoken": "9.0.10"{{/if}}
+    {{#if isPostgres}}, "@types/pg": "8.15.4", "drizzle-kit": "0.31.4"{{/if}}
+    {{#if useMulter}}, "@types/multer": "2.0.0"{{/if}}
   }
 }
