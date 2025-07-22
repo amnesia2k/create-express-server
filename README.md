@@ -1,4 +1,4 @@
-# **XStack CLI: Rapid Express.js Project Scaffolding** 🚀
+# **Express Server CLI: Rapid Express.js Project Scaffolding** 🚀
 
 This project is a robust Command Line Interface (CLI) tool designed to streamline the setup of your Express.js backend applications. Say goodbye to repetitive boilerplate! XStack CLI empowers developers to quickly scaffold new projects with customizable options for language (JavaScript or TypeScript), database (MongoDB or PostgreSQL), ORM/ODM (Mongoose or Drizzle ORM), and essential utilities like JWT authentication and Multer for file uploads. It's engineered to kickstart your development process efficiently, letting you focus on building core features right away.
 
