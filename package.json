@@ -1,6 +1,6 @@
 {
   "name": "create-xpress-server",
-  "version": "2.3.4",
+  "version": "2.3.5",
   "description": "A CLI tool to quickly scaffold Express.js backend projects with customizable options for language, database, ORM/ODM, and other tools.",
   "main": "index.js",
   "preferGlobal": true,
@@ -46,7 +46,9 @@
     "chalk": "^5.4.1",
     "commander": "^14.0.0",
     "execa": "^9.6.0",
+    "figlet": "^1.8.2",
     "fs-extra": "^11.3.0",
+    "gradient-string": "^3.0.0",
     "handlebars": "^4.7.8",
     "inquirer": "^12.8.2"
   }
